@@ -149,6 +149,8 @@ spec:
                 secretKeyRef:
                   name: wazuh-cluster-key
                   key: key
+  persistentVolumeClaimRetentionPolicy:
+    whenDeleted: Retain
   volumeClaimTemplates:
     - metadata:
         name: wazuh-manager-master

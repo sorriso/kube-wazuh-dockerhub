@@ -125,6 +125,8 @@ spec:
               name: indexer-rest
             - containerPort: 9300
               name: indexer-nodes
+  persistentVolumeClaimRetentionPolicy:
+    whenDeleted: Retain
   volumeClaimTemplates:
     - metadata:
         name: wazuh-indexer
